@@ -1,8 +1,8 @@
 dsl = Document.create :RENCONTRE do 
-	sport "HOCKEY"
-	equipes "Ottawa Senators", "Montreal Canadiens"
-	joueurs "Erik Karlsson", "Craig Anderson", "Carey Price", "Brendan Gallagher"
-	match "Stade Olymphique", "12-30-2015", 190
+	sport "HOCKEY" # ou FOOT, TENNIS 
+	equipeA "Ottawa Senators", "Erik Karlsson", "Craig Anderson" 
+	equipeB "Montreal Canadiens", "Carey Price", "Brendan Gallagher" # ajout des équipes et de leurs joueurs
+	match "Stade Olymphique", "12-30-2015", 190 # paramètes de la rencontre
 	score 0, 3
 	vainqueur "Montreal Canadiens"
 end
