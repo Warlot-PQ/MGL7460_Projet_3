@@ -1,11 +1,11 @@
 new DSL.CreerRencontre("nom de la rencontre")
 	.sport(HOCKEY)								// ou FOOT, TENNIS
-	.ajouterEquipe("Canadiens de Montréal")
-	.ajouterJoueur("Bob Martin")						// Ajoute un joueur à l'équipe citée précédemment
-	.ajouterJoueur("Jack Bower")
-	.ajouterEquipe("Karibou de Toronto")
-	.ajouterJoueur("Franck Newman")
-	.ajouterJoueur("Cal Lightman")
+	.avecEquipe("Canadiens de Montréal")
+	.avecJoueur("Bob Martin")				// Ajoute un joueur à l'équipe citée précédemment
+	.avecJoueur("Jack Bower")
+	.avecEquipe("Karibou de Toronto")
+	.avecJoueur("Franck Newman")
+	.avecJoueur("Cal Lightman")
 	.tempsMatch(190)
 	.lieu("Stade Olympique")
 	.date("12-30-2015")
