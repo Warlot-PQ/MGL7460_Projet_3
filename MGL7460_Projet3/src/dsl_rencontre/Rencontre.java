@@ -1,6 +1,5 @@
 package dsl_rencontre;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public class Rencontre {
@@ -44,7 +43,10 @@ public class Rencontre {
 		return this;
 	}
 
-	public Rencontre AvecJoueur(String nomJ) {
+	public Rencontre AvecJoueur(String nomJ) throws Exception {
+		if(this.equipes.size() == 0){
+			throw new Exception("Entrez d'abord une equipe");
+		}
 		this.joueurs.add(this.equipes.get(this.equipes.size()-1) + " - " + nomJ);
 		return this;
 	}
@@ -79,7 +81,10 @@ public class Rencontre {
 		return this;
 	}
 
-	public void Fin() {
+	public void Fin() throws Exception {
+		if(this.nom == ""){
+			throw new Exception("Entrez obligatoirement le nom de la rencontre");
+		}
 		System.out.println("Nom de la renconre : " + this.nom);
 		System.out.println("Sport : " + this.sport);
 		System.out.println("Equipes : " + this.equipes.get(0) + " VS " + this.equipes.get(1));
@@ -94,4 +99,49 @@ public class Rencontre {
 		System.out.println("Score du vainqueur : " + this.scoreV);
 		System.out.println("Score du perdant : " + this.scoreP);
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public String getSport() {
+		return sport;
+	}
+
+	public String getLieu() {
+		return lieu;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public String getVainqueur() {
+		return vainqueur;
+	}
+
+	public ArrayList<String> getEquipes() {
+		return equipes;
+	}
+
+	public ArrayList<String> getJoueurs() {
+		return joueurs;
+	}
+
+	public int getTemps() {
+		return temps;
+	}
+
+	public int getScoreV() {
+		return scoreV;
+	}
+
+	public int getScoreP() {
+		return scoreP;
+	}
+
+	public static Rencontre getINSTANCE() {
+		return INSTANCE;
+	}
+
 }
