@@ -1,4 +1,7 @@
 class DSL
+	
+	attr_reader :nomSport, :equipe, :score1, :score2, :lieu, :date, :temps, :nomVainquer, :nomRencontre
+	
 	def initialize(nomRencontre)
 		@nomRencontre = nomRencontre
 		@sport
